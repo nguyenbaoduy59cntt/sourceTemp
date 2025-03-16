@@ -5,15 +5,9 @@ import NavbarTop from 'components/navbar/top/NavbarTop';
 import NavbarVertical from 'components/navbar/vertical/NavbarVertical';
 import Footer from 'components/footer/Footer';
 
-import { useAppContext } from 'providers/AppProvider';
-
 const MainLayout = () => {
   const { hash, pathname } = useLocation();
   const isKanban = pathname.includes('kanban');
-
-  const {
-    config: { isFluid, navbarPosition }
-  } = useAppContext();
 
   useEffect(() => {
     setTimeout(() => {
@@ -32,15 +26,13 @@ const MainLayout = () => {
   }, [pathname]);
 
   return (
-    <div className={isFluid ? 'container-fluid' : 'container'}>
-      {(navbarPosition === 'vertical' || navbarPosition === 'combo') && (
-        <NavbarVertical />
-      )}
+    <div className={'container'}>
+      <NavbarVertical />
       <div className={classNames('content', { 'pb-0': isKanban })}>
         <NavbarTop />
         {/*------ Main Routes ------*/}
         <Outlet />
-        {!isKanban && <Footer />}
+        <Footer />
       </div>
     </div>
   );

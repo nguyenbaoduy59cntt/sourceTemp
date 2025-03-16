@@ -1981,7 +1981,7 @@ progress {
   margin-right: auto;
   margin-left: auto;
 }
-
+/* 
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
@@ -2006,7 +2006,7 @@ progress {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1480px;
   }
-}
+} */
 :root {
   --falcon-breakpoint-xs: 0;
   --falcon-breakpoint-sm: 576px;
@@ -23738,7 +23738,7 @@ h5, .h5 {
 .windows.firefox .navbar-vertical.navbar-vibrant .scrollbar {
   scrollbar-color: var(--falcon-navbar-vertical-vibrant-scrollbar-color) transparent;
 }
-
+/* 
 @media (min-width: 576px) {
   .container .navbar-vertical {
     max-width: 540px;
@@ -23763,7 +23763,7 @@ h5, .h5 {
   .container .navbar-vertical {
     max-width: 1480px;
   }
-}
+} */
 @media (min-width: 1540px) {
   .navbar-vertical.navbar-expand-xxl {
     max-width: 12.625rem;
